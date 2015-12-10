@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3bbc1b3b-083b-4327-844e-9341b4d6c173">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from hocsinh]]>
+	</queryString>
+	<field name="maso" class="java.lang.Integer"/>
+	<field name="hoten" class="java.lang.String"/>
+	<field name="lop" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="4421db01-ab0b-4427-b8da-47c2958da000" x="204" y="24" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Danh sach hoc sinh]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="4cbe3a68-8d45-401f-9c56-daec41473795" x="0" y="15" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[maso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="627ea2f2-54f0-4cab-b963-6e0600e35f0a" x="204" y="15" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[hoten]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0c215e58-7dc2-4d10-93a3-638366ea3bb2" x="427" y="15" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[lop]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement uuid="520d2f3c-97b7-468c-882a-5e9ceff58a0a" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{maso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0ade7ac3-014d-412b-b0d4-7813c42ade27" x="204" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{hoten}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e855e904-b812-48e8-adc3-738e02f2616b" x="427" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{lop}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

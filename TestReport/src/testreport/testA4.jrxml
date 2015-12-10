@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="99bee559-fe18-497a-8af4-4979342179a1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="91a5ac75-6039-4d40-bf48-5f437aa195be"/>
+	<subDataset name="dataset1" uuid="e71dad8a-1b15-472d-a387-4428680a3560"/>
+	<parameter name="hoten" class="java.lang.String"/>
+	<parameter name="addr" class="java.lang.String"/>
+	<parameter name="lydo" class="java.lang.String"/>
+	<parameter name="sotien" class="java.lang.String"/>
+	<parameter name="bangchu" class="java.lang.String"/>
+	<parameter name="kemtheo" class="java.lang.String"/>
+	<parameter name="bophan" class="java.lang.String"/>
+	<parameter name="duan" class="java.lang.String"/>
+	<parameter name="day" class="java.lang.String"/>
+	<parameter name="m" class="java.lang.String"/>
+	<parameter name="year" class="java.lang.String"/>
+	<parameter name="quyenso" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="537b91d3-6a0a-4f62-83bf-ed3669b53506" x="0" y="0" width="124" height="20"/>
+				<textElement/>
+				<text><![CDATA[Đơn vị : HKT Consultant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c41d148f-7858-494b-943f-f06ffa76c911" x="181" y="0" width="175" height="40"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Phiếu thu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c0c64dc7-aa25-43c3-bde4-41ca9eed173a" x="414" y="0" width="62" height="20"/>
+				<textElement/>
+				<text><![CDATA[Quyển số :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ec110de-0dbb-4952-9d0f-b18017ea4dfc" x="0" y="20" width="50" height="20"/>
+				<textElement/>
+				<text><![CDATA[Bộ phận :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="994f6cd0-6ed2-4649-9ef7-c1e4840a0408" x="0" y="40" width="50" height="20"/>
+				<textElement/>
+				<text><![CDATA[Dự án :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a3edead8-42c3-4d76-af5e-a8821a83dca0" x="160" y="29" width="220" height="31"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Ngày                tháng             năm    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f83e0973-05bf-4a8e-9243-1818afee535d" x="414" y="20" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nợ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6f46d88e-eb17-4b3a-9651-5cdf5606b65d" x="414" y="40" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[NỢ CÓ:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3d1ddcee-bea1-4bf0-bdb5-169be21a7031" x="50" y="20" width="74" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{bophan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d22a7d4e-6677-4114-a9d1-e6778c440c0e" x="50" y="40" width="110" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{duan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3aa5814b-eadc-47d7-8d6d-34b3a3cb6da1" x="222" y="29" width="37" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{day}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="797a7b68-12e2-48aa-a02d-9f26c2b002a5" x="283" y="29" width="28" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{m}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="19c67f3b-369e-4f1b-aa9f-3f461ec9bf8b" x="356" y="29" width="58" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f6d50d28-8c73-465f-9042-76301800cda2" x="476" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{quyenso}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="fb28424c-e1c1-4aa1-a299-69df8a6c132f" x="0" y="0" width="145" height="20"/>
+				<textElement/>
+				<text><![CDATA[Họ và tên người nộp tiền:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a861d7d9-69a3-4200-ad3d-394956c274c2" x="211" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{hoten}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bd0aa4d2-bba0-4dab-8db5-c7dc7a9b4228" x="0" y="20" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Địa chỉ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d0f4801d-2fc9-4971-a920-f6a5a9a81b0d" x="0" y="41" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Lý do nộp:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a893a591-3e1f-496b-a8ce-98810803dd73" x="211" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{addr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="58988cde-b0d1-4aee-80d2-d5a546d45050" x="211" y="41" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{lydo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d71e747b-62d5-483c-a0f5-a090335cc111" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Số tiền:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="25eb146e-3e80-4345-b449-dd1bddd33aee" x="0" y="20" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Viết bằng chữ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cb606a86-4fe6-468b-981f-31a15a44b318" x="0" y="40" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kèm theo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3b906ddb-9e49-4248-ba0a-03256ac52d11" x="211" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{sotien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e1174042-8663-44a0-b45d-4ae2ec437e5c" x="211" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{bangchu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="19d354da-beed-4e53-95cb-d4fb8b0007f5" x="211" y="40" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{kemtheo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8e863d27-f20a-44cb-8e4f-47044d71208e" x="414" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[VNĐ]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="72a885b5-a18f-40fc-a020-e11285b033fd" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Thủ trưởng đơn vị:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ed92ad81-45f7-41ca-bbb3-0b193d49b0c8" x="194" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kế toán trưởng:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="62463f08-89ce-4816-a54e-432628e4587c" x="414" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Người lập:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="eadc41f8-f4c0-4bb0-abd6-13ee7c9433bb" x="0" y="14" width="100" height="14"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[  (Ký, học tên, đóng dấu)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="424a30fe-08f5-4052-b92c-ba1cfb721d31" x="194" y="14" width="100" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[     (Ký, học tên )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dc30763b-d512-46f5-8feb-088327e0ed84" x="414" y="14" width="100" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(Ký, học tên)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4f250fe6-2f62-4381-8c16-b02a732a4196" x="394" y="56" width="120" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Phan Thanh Tú]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
